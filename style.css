@@ -54,25 +54,25 @@ h2 {
   
 .offer-details {
     display: flex;
-    flex-direction: column; /* Stack radio button and price container vertically */
+    flex-direction: column; 
 }
 
 .radio-price-container {
     display: flex;
-    align-items: center; /* Align radio button and price container horizontally */
+    align-items: center; 
 }
 
 .price-container {
     display: flex;
-    flex-direction: column; /* Stack the label and price vertically */
-    margin-left: 10px; /* Space between the radio button and price container */
+    flex-direction: column; 
+    margin-left: 10px; 
 }
 
 .price-container-2 {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Three columns: radio button, price label, and Most Popular */
-    gap: 10px; /* Space between columns */
-    align-items: center; /* Center items vertically */
+    grid-template-columns: auto 1fr auto; 
+    gap: 10px; 
+    align-items: center; 
 }
 
 .price-label {
@@ -82,12 +82,12 @@ h2 {
 .price {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 5px; /* Space between the label and price */
+    margin-top: 5px; 
 }
   
 .offer-details label {
-    display: flex; /* Make the label a flex container */
-    align-items: center; /* Center the content vertically */
+    display: flex; 
+    align-items: center; 
     cursor: pointer;
 }
 
@@ -134,11 +134,11 @@ h2 {
 }
   
 .size-color {
-    display: none; /* Initially hidden */
+    display: none; 
     margin-top: 10px;
     padding: 10px;
     border-radius: 8px;
-    overflow: hidden; /* Ensures content is clipped */
+    overflow: hidden; 
 }
 
 .size-color.show {
@@ -203,14 +203,14 @@ h2 {
     color: black;
 }
 
-/* Hide default radio button */
+
 input[type="radio"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Custom radio button appearance */
+
 .radio-button {
     position: relative;
     display: inline-block;
@@ -232,14 +232,14 @@ input[type="radio"] {
     border-radius: 50%;
     background-color: #FF6B82;
     transform: translate(-50%, -50%);
-    opacity: 0; /* Hide inner circle by default */
+    opacity: 0; 
 }
 
 input[type="radio"]:checked + .radio-button::before {
-    opacity: 1; /* Show inner circle when checked */
+    opacity: 1; 
 }
 
-/* Ensure radio button labels are clickable */
+
 label[for^="offer"] {
     cursor: pointer;
 }
