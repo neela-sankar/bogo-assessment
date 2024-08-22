@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.bogo-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #f4f1f1;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+  
+h2 {
+    color: #FF6B82;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.off{
+    font-size: 30px;
+}
+  
+.offer {
+    display: flex;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+    background-color: #fefefe;
+}
+  
+.offer.selected {
+    border: 2px solid #FF6B82;
+}
+  
+.offer.popular .offer-details label {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.offer-badge {
+    background-color: #FF6B82;
+    color: white;
+    height: 74px;
+    width: 70px;
+    border-radius: 12px 0px 0px 12px;
+    padding: 10px;
+    font-size: 24px;
+    margin-right: 10px;
+    width: 80px;
+    text-align: center;
+    border-right: #F7F8FF 2px dashed;
+}
+  
+.offer-details {
+    display: flex;
+    flex-direction: column; /* Stack radio button and price container vertically */
+}
+
+.radio-price-container {
+    display: flex;
+    align-items: center; /* Align radio button and price container horizontally */
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column; /* Stack the label and price vertically */
+    margin-left: 10px; /* Space between the radio button and price container */
+}
+
+.price-container-2 {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Three columns: radio button, price label, and Most Popular */
+    gap: 10px; /* Space between columns */
+    align-items: center; /* Center items vertically */
+}
+
+.price-label {
+    cursor: pointer;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px; /* Space between the label and price */
+}
+  
+.offer-details label {
+    display: flex; /* Make the label a flex container */
+    align-items: center; /* Center the content vertically */
+    cursor: pointer;
+}
+
+.option{
+    font-size: 10px;
+}
+  
+.offer-details .price {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.discount {
+    display: inline-block;
+    background-color: #FF6B82;
+    color: #fff;
+    border-radius: 2px;
+    padding: 1px 5px 1px 4px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+}
+  
+.most-popular {
+    color: #FF6B82;
+    font-size: 14px;
+    margin-left: 15px;
+    font-weight: 600;
+}
+  
+.discount-badge {
+    background-color: #FF6B82;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+  
+.original-price {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-size: 12px;
+    margin-left: 6px;
+}
+  
+.size-color {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures content is clipped */
+}
+
+.size-color.show {
+    display: block;
+}
+  
+.option-header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 8px;
+    font-size: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+  
+.option select {
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+  
+.delivery {
+    display: flex;
+    justify-content: space-between;
+    color: #FF6B82;
+    font-weight: 500;
+    margin: 20px 0;
+}
+  
+.add-to-cart {
+    background-color: #FF6B82;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.add-to-cart:hover {
+    background-color: #ff5470;
+}
+  
+.powered-by {
+    margin-top: 10px;
+    color: #a0a0a0;
+    font-size: 14px;
+}
+  
+.powered-by span {
+    color: #ff5470;
+    font-weight: bold;
+}
+
+.total{
+    color: black;
+}
+
+/* Hide default radio button */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom radio button appearance */
+.radio-button {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #FF6B82;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.radio-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF6B82;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Hide inner circle by default */
+}
+
+input[type="radio"]:checked + .radio-button::before {
+    opacity: 1; /* Show inner circle when checked */
+}
+
+/* Ensure radio button labels are clickable */
+label[for^="offer"] {
+    cursor: pointer;
+}
